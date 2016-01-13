@@ -1,0 +1,42 @@
+﻿@charset "utf-8";
+/*===============================================*/
+/* Copyright:Design By Gotop.wei 2010/03/12 ^_^ **/
+/* QQ:12475361 ***********************************/
+/* Pass the test: IE6/IE7/IE8/ff3/Chrome *********/
+/* ==============================================*/
+
+/* global *************************/
+
+
+/**/
+/**/
+/**/
+div.Lv2_COLUMN { display:block; font-size:12px; padding:0px;min-height:272px;  }
+div.Lv2_COLUMN .news_list { margin:5px auto 15px auto; width:95%; }
+div.Lv2_COLUMN .news_list li { list-style-type: none; padding:0px; padding-left:23px; height:35px;line-height:35px; background:url(../images/clock.png) 0px 8px no-repeat;  border-bottom:#e5e5e5 1px solid;  position:relative; }
+div.Lv2_COLUMN .news_list li a{ height:35px; line-height:35px;   }
+div.Lv2_COLUMN .news_list .time { width:150px; display:inline-block; position:absolute; top:0px;  right:10px;   color:#999999;  height:35px; line-height:35px;  float:right; text-align:right }
+
+
+/**/
+div.Lv2_COLUMN .news_list2 { margin:5px auto 15px auto; width:95%; }
+div.Lv2_COLUMN .news_list2 li { list-style-type: none; padding:0px; padding-left:23px; height:35px; background:url(../images/page_edit.png) 0px 8px no-repeat; border-bottom:#e5e5e5 1px solid;  position:relative; }
+div.Lv2_COLUMN .news_list2 li a{ height:35px; line-height:35px;  }
+div.Lv2_COLUMN .news_list2 .time { width:130px; background:#0F0 display:inline-block; position:absolute; bottom:0px; right:10px;   color:#999999;  height:35px; line-height:35px;  float:right; text-align:right }
+
+
+
+/**/
+div.Lv2_COLUMN .news_list3 { margin:5px auto 15px auto; width:95%; }
+div.Lv2_COLUMN .news_list3 li { list-style-type: none; padding:0px; padding-left:23px; height:35px; background:url(../images/tj.png) 0px 8px no-repeat; border-bottom:#e5e5e5 1px solid;  position:relative; }
+div.Lv2_COLUMN .news_list3 li a{ height:35px; line-height:35px;  }
+div.Lv2_COLUMN .news_list3 .time { width:80px; display:inline-block; position:absolute; bottom:0px; right:10px;   color:#999999;  height:35px; line-height:35px;  float:right; text-align:right }
+
+.left_topbg { background-image: url(../images/content-bg.gif); background-repeat: repeat-x; }
+.left_bt { font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; color: #395a7b; }
+.left_bt2 { font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 25px; font-weight: bold; color: #333333; }
+.titlebt { font-size: 12px; line-height: 26px; font-weight: bold; color: #000000; background-image: url(../images/top_bt.jpg); background-repeat: no-repeat; display: block; text-indent: 15px; padding-top: 5px; }
+.left_txt { font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 25px; color: #000000;  }
+.left_txt2 { font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 25px; color: #000000; }
+.line_table { border: 1px solid #CCCCCC; }
+

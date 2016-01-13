@@ -1,0 +1,4 @@
+2016-01-08 16:02:34 INFO batchDispatch:64 - lkj|2016-01-08 16:02:34ID为778DispatchServer未部署或未启用
+2016-01-08 16:02:34 INFO batchDispatch:64 - lkj|2016-01-08 16:02:34ID为779DispatchServer未部署或未启用
+2016-01-08 16:02:35 INFO batchDispatch:64 - lkj|2016-01-08 16:02:35名称-1001服分发服1,ID:777的Dispatchkill.sh: line 1: kill: (29898) - 没有那个进程kill.sh: line 3: kill: (29898) - 没有那个进程
+2016-01-08 16:02:37 INFO batchDispatch:64 - lkj|2016-01-08 16:02:37名称-1001服分发服副,ID:780的Dispatchkill.sh: line 1: kill: (29899) - 没有那个进程kill.sh: line 3: kill: (29899) - 没有那个进程

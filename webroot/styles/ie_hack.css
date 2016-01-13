@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+
+/*ie6*/
+
+.menu ul li a.hide, .menu ul li a:visited.hide {display:none;}
+.menu ul li a:hover ul li a.hide {display:none;}
+.menu ul li a:hover {color:#fff; background:url(../images/menubg_hover.png) repeat-x}
+.menu ul li a:hover ul {display:block; position:absolute; top:51px; left:0; width:100px;}
+.menu ul li a:hover ul li a.sub {background:#6a3; color:#fff;}
+.menu ul li a:hover ul li a {display:block; background:#ddd; color:#000;color:#000; height:25px; line-height:25px; text-align:left;width:85px; padding-left:15px; font-size:12px }
+.menu ul li a:hover ul li a ul {visibility:hidden;}
+.menu ul li a:hover ul li a:hover {background:#000; color:#fff;}
+.menu ul li a:hover ul li a:hover ul {visibility:visible; position:absolute; left:105px; top:0; color:#000;}
+.menu ul li a:hover ul li a:hover ul.left {left:-105px;}

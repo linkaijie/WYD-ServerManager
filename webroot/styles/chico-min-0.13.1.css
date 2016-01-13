@@ -1,0 +1,156 @@
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+}
+
+.ch-datagrid-controls,
+.ch-datagrid {
+	width: 100%;
+	border: 1px solid #EDEDED;
+	text-align: left;
+}
+
+.ch-datagrid-controls caption,
+.ch-datagrid caption {
+	text-align: left;
+	font-weight: normal;
+	margin: 10px 0;
+	font-size: 18px;
+}
+
+.ch-datagrid-controls thead tr,
+.ch-datagrid thead tr {
+	border-top: 1px solid #EDEDED;
+}
+
+.ch-datagrid-controls th,
+.ch-datagrid th {
+	
+	border-bottom: 1px solid #EDEDED;
+	border-left: 1px solid #EDEDED;
+	font-size: 13px;
+	line-height: 26px;
+	padding: 0 10px;
+	text-align: left;
+	text-shadow: 0 1px 0 #FFFFFF;
+	vertical-align: middle;
+	color: #666666;
+}
+
+.ch-datagrid-controls th {
+	background-color: #8080ff;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FAFAFA), color-stop(100%, #ECECEC));
+	background-image: -webkit-linear-gradient(#6A6AFF, #ECECEC);
+	background-image: -moz-linear-gradient(#6A6AFF, #ECECEC);
+	background-image: -o-linear-gradient(#6A6AFF, #ECECEC);
+	background-image: linear-gradient(#6A6AFF, #ECECEC);
+	cursor: pointer;
+}
+
+.ch-datagrid-controls th:hover {
+	background: #8080ff;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FEFEFE), color-stop(100%, #F2F2F2));
+	background-image: -webkit-linear-gradient(#FEFEFE, #F2F2F2);
+	background-image: -moz-linear-gradient(#FEFEFE, #F2F2F2);
+	background-image: -o-linear-gradient(#FEFEFE, #F2F2F2);
+	background-image: linear-gradient(#FEFEFE, #F2F2F2);
+}
+
+.ch-datagrid-controls th:active,
+.ch-datagrid-controls th.ch-datagrid-selected {
+	background: #E5E5E5;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #E5E5E5), color-stop(100%, #D8D8D8));
+	background-image: -webkit-linear-gradient(#E5E5E5, #D8D8D8);
+	background-image: -moz-linear-gradient(#E5E5E5, #D8D8D8);
+	background-image: -o-linear-gradient(#E5E5E5, #D8D8D8);
+	background-image: linear-gradient(#E5E5E5, #D8D8D8);
+	border-top: 1px solid #DCDCDC;
+}
+
+.ch-datagrid-controls th.ch-datagrid-selected {
+	position: relative;
+}
+
+.ch-datagrid-selected .ch-datagrid-asc,
+.ch-datagrid-selected .ch-datagrid-desc {
+	float: right;
+}
+
+.ch-datagrid-selected .ch-datagrid-asc:after,
+.ch-datagrid-selected .ch-datagrid-desc:after {
+	font-family: icons;
+	font-style: normal;
+	content: "\f0dc";
+}
+
+.ch-datagrid-controls th:first-child,
+.ch-datagrid th:first-child {
+	border-left: none;
+}
+
+.ch-datagrid-controls tr,
+.ch-datagrid tr {
+	border-top: 1px solid #EDEDED;word-break:break-all;
+}
+
+
+.ch-datagrid-selected {
+	background-color: #FDF9D5;
+}
+
+.ch-datagrid-controls td,
+.ch-datagrid td {
+	height: 20px;
+	padding: 0 10px;
+	vertical-align: middle;
+}
+
+
+
+.ch-form-row {
+    margin-bottom: 0;
+    padding: 5px 0;
+    position: relative;vertical-align: baseline;
+}
+
+.ch-list-options label{
+	 font-size: 13px;
+    text-align: right;
+     display: inline-block;
+    padding: 7px 11px 5px 0;
+    position: relative;
+}
+
+.ch-form-row label {
+    font-size: 13px;
+    text-align: right;
+    width: 120px;
+    display: inline-block;
+    padding: 7px 11px 5px 0;
+    position: relative;
+}
+.ch-form-row textarea {
+    vertical-align: top;
+}
+
+.ch-form-row input,textarea{
+	border: 1px solid #CDCDCD;
+    font-size: 13px;
+    margin: 5px 0;
+     border-radius: 3px 3px 3px 3px;
+    box-shadow: 1px 2px 2px rgba(204, 204, 204, 0.3) inset;
+    padding: 1px;
+}
+
+#check4a{
+	border: 0 none;
+    padding: 0;
+    height: 14px;
+    width: 14px;
+    vertical-align: top;
+}

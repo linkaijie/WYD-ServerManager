@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans xmlns="http://www.springframework.org/schema/security"
+    xmlns:b="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.0.xsd">
+	<http auto-config="true" access-denied-page="/noPermission.jsp" >
+		<intercept-url pattern="/resource/**" filters='none' />
+		<intercept-url pattern="/styles/**" filters='none' />
+		<intercept-url pattern="/images/**" filters='none' />
+		<intercept-url pattern="/scripts/**" filters='none' />
+		<intercept-url pattern="/widgets/**" filters='none' />
+		<intercept-url pattern="/square/**" filters='none' />
+		<intercept-url pattern="/fckeditor/**" filters='none' />
+		<intercept-url pattern="/login.jsp*" filters='none' />
+		<intercept-url pattern="/jsp/operate/submit_mh.jsp" filters='none' />
+		<intercept-url pattern="/submitMh/**" filters='none' />
+		<intercept-url pattern="/monitor/**" filters='none' />
+		<intercept-url pattern="/getConfig/**" filters='none' />
+		<intercept-url pattern="/synGmTool/**" filters='none' />
+		<intercept-url pattern="/getHttpCfg/**" filters='none' />
+		<intercept-url pattern="/**" access="ROLE_ADMIN,ROLE_USER,ROLE_DEFAULT" />
+		<form-login login-page="/login.jsp" default-target-url="/user/login.action" always-use-default-target="true" />
+		<session-management invalid-session-url="/login.jsp">
+			<concurrency-control max-sessions="1" expired-url="/login.jsp?isOnline=true" />
+		</session-management>
+	  <logout invalidate-session="true" logout-success-url="/login.jsp" logout-url="/j_spring_security_logout"/>  
+	</http>
+
+	<authentication-manager alias="authenticationManager">
+		<authentication-provider user-service-ref="userDetailsService">
+			<password-encoder hash="md5" />
+		</authentication-provider>
+	</authentication-manager>
+
+	<b:bean id="userDetailsService" class="com.zhwyd.server.spring.security.SSOUserDetailsService">
+		<b:property name="userTableServices" ref="userTableServices" />
+	</b:bean>
+
+</b:beans>
+

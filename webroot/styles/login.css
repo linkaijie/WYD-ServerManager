@@ -1,0 +1,64 @@
+@charset "utf-8";
+/*===============================================*/
+/*Copyright:Design By Gotop.wuzhiwei 2012/06/20 ^_^
+/*QQ:12475361************************************/
+/*Pass the test: IE6/IE7/IE8/ff3/Chrome**********/
+
+/*==============================================*/
+
+/* global *************************/
+* { font-family: Arial, Verdana, Tahoma, Arial, Helvetica, sans-serif; margin:0; padding:0; }
+img { border:0; }
+html, body { font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 12px; line-height: 18px; color: #666666; background:#3b85c6 url(../images/login_v2/bg_c.png) repeat-x; }
+html { }
+body { }
+ul, li { list-style:none; }
+a:link, a:visited, a:active { text-decoration:none; color:#456ed0; color:#006eb7; }
+a:hover { text-decoration:underline; }
+.clear { clear:both; }
+/* cut dotted line style ---------*/
+a { blr:expression(this.onFocus=this.close());
+}/*IE only*/
+a { blr:expression(this.onFocus=this.blur());
+}/*IE only */
+a:focus { -moz-outline-style: none; } /* ff */
+p { margin:0 0px 10px }
+* { PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px }
+.login_body { }
+LI { LIST-STYLE-TYPE: none }
+FIELDSET { BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none }
+IMG { BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none }
+BODY { FONT: 12px Arial, 宋体; }
+#container { MARGIN: 0px auto; position:relative; margin-top:8%; }
+A { COLOR: #36c }
+LI.more A { COLOR: #36c }
+I { FONT-STYLE: normal }
+#main { BACKGROUND:url(../images/login_v2/bg.jpg) no-repeat; width:1218px; margin:0 auto; }
+.regnc A { BACKGROUND: url(../images/login_v2/sprite_ico.png) no-repeat }
+H2 { BACKGROUND: url(../images/login_v2/sprite_ico.png) no-repeat }
+DIV.tips SPAN { BACKGROUND: url(../images/login_v2/sprite_ico.png) no-repeat }
+INPUT.submit { background:url(../images/login_v2/bgbtn.png) no-repeat; width:89px; height:29px; text-indent:-9999px; border:0px; }
+HTML { BACKGROUND-POSITION: 0px -930px }
+.info A { OUTLINE-STYLE: none; COLOR: #3366cc; TEXT-DECORATION: none }
+#main { HEIGHT:364px; width:517px; OVERFLOW: hidden; background:url(../images/login_v2/l_bg.png) no-repeat; }
+#left { WIDTH: 601px; FLOAT: left }
+#right { WIDTH: 250px; height:200px; FLOAT: right; margin:135px 25px 0 0; _margin:120px 5px 0 0; }
+#right input, #right select { WIDTH: 125px; border:#6b78a0 1px solid; color:#3c4d82; }
+DL { LINE-HEIGHT: 1.8; MARGIN: 0px 0px 0px 34px }
+DT { COLOR: #005bac }
+DT SPAN { COLOR: green }
+DD { MARGIN: 0px 0px 20px; COLOR: #666 }
+DT A { TEXT-DECORATION: none }
+DIV.tips { BORDER-BOTTOM: #ff8f03 1px solid; BORDER-LEFT: #ff8f03 1px solid; PADDING-BOTTOM: 4px; LINE-HEIGHT: 16px; MARGIN: 12px 0px 12px 28px; PADDING-LEFT: 6px; WIDTH: 196px; PADDING-RIGHT: 6px; BACKGROUND: #fdfce0; BORDER-TOP: #ff8f03 1px solid; BORDER-RIGHT: #ff8f03 1px solid; PADDING-TOP: 5px }
+FORM { MARGIN: 1px; BACKGROUND-POSITION: 0px -86px }
+FORM DIV { MARGIN: 0px 0px 0px 28px }
+H2 { LINE-HEIGHT: 47px; TEXT-INDENT: 28px; BACKGROUND-POSITION: 0px -116px; HEIGHT: 47px; COLOR: #333333; FONT-SIZE: 14px; font-weight:bold; }
+FORM P { MARGIN: 10px 0px 0px; FONT-FAMILY: Tahoma }
+INPUT.text { BORDER-BOTTOM: #ddd 1px solid; BORDER-LEFT: #c3c3c3 1px solid; PADDING-BOTTOM: 3px !important; PADDING-LEFT: 4px !important; WIDTH: 200px; PADDING-RIGHT: 4px !important; FONT: bold 14px Arial, 宋体; HEIGHT: 17px; BORDER-TOP: #7c7c7c 1px solid; BORDER-RIGHT: #c3c3c3 1px solid; PADDING-TOP: 3px !important }
+.ft { MARGIN: 17px 0px 0px }
+INPUT.submit { BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; WIDTH: 97px; FONT: bold 12px 宋体; BACKGROUND-POSITION: 0px 0px; BORDER-TOP-STYLE: none; HEIGHT: 31px; BORDER-LEFT-STYLE: none; CURSOR: pointer }
+INPUT.button { BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; WIDTH: 97px; FONT: bold 12px 宋体; BACKGROUND-POSITION: 0px 0px; BORDER-TOP-STYLE: none; HEIGHT: 31px; BORDER-LEFT-STYLE: none; CURSOR: pointer }
+INPUT.button { MARGIN: 0px 0px 0px 24px; WIDTH: 101px; FONT: 14px 宋体; BACKGROUND-POSITION: 0px -70px; HEIGHT: 30px; COLOR: #fff }
+P.id { BACKGROUND-POSITION: 186px -38px }
+FORM P * { VERTICAL-ALIGN: middle }
+FORM SPAN { COLOR: #999 }

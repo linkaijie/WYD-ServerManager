@@ -1,0 +1,17 @@
+[system]
+debug = true
+default_encoding = UTF-8
+ipdurl = http://221.4.215.11:8092/load
+key = pifnwkjdhn
+accountAddress = http://221.4.215.11:8087/account/api/user
+#accountAddress = http://180.150.188.84:8191/account/api/user
+#本机server表中对于的id
+localServerId = 34
+#分区前缀类型
+cnType=CN
+#主IPD
+ipdIpMain=1.2.3.4
+#副ipd
+ipdIpBak=5.6.7.8
+#对战服ip
+battleIp=9.10.11.12

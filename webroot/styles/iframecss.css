@@ -1,0 +1,75 @@
+@charset "gb2312";
+* { margin:0; padding:0; list-style:none; }
+html { height:100%; overflow:hidden; background:#fff; }
+body { height:100%; overflow:hidden; background:#fff; }
+div { line-height:1.6; }
+.top { position:absolute; left:0px; top:0px; right:0px; /*height:68px;*/ height:127px;z-index:1500; }
+.side { position:absolute; right:0px;top:127px; bottom:40px; width:400px; overflow:hidden; height:100%; border-left:#CCC 1px solid; z-index:100;/* */ }
+.side2 { position:absolute; right:400px; top:0px; bottom:40px; width:33px; overflow:hidden; z-index:200; }
+.main { position:absolute; left:0px; top:127px; bottom:40px; right:0px;margin-right:401px; }
+.bottom { display:none; position:absolute; left:0px; bottom:-2px; right:0px; height:33px; overflow:hidden;  }
+.main iframe { width:100%; height:100%; }
+/*---ie6/ie7 ---*/
+html { *padding:127px 0px 0px 0px;
+}
+.top { *height:127px;
+*margin-top:-127px;
+*margin-bottom:0px;
+*position:relative;
+*top:0;
+*right:0;
+*bottom:0;
+*left:0;
+}
+.side {
+padding-top:78px; *float:right;
+*width:400px;
+/**position:relative;
+*top:0;
+*right:0;
+
+*/
+*bottom:33px;
+background:#FFF;
+}
+.side2 {
+*height:100%; padding-top:143px; *float:right;
+*width:33px;
+*top:0;
+*right:400px;
+*bottom:40;
+}
+.main {
+*height:100%; _margin-left:0px; *position:relative;
+*top:0;
+_margin-right:400px;
+*bottom:0;
+*left:0;/**/
+}
+.bottom {
+
+/* *position:relative; */
+*right:0;
+*bottom:-2px;
+*left:0;
+z-index:3000;
+background:#FFF;}
+/**/
+.top iframe { width:100%; height:100%; }
+.side iframe { width:100%; height:100%; }
+.left_bar iframe { width:100%; height:100%; }
+.main iframe { width:100%; height:100%; overflow:auto }
+.bottom iframe { width:100%; height:100%; overflow:auto; }
+/* ifame_chane style *************************/
+.main_desk { left:0px; bottom:0px; right:0px; }
+.main_hid_bar { right:0px; *right:0;
+margin-right:0px; }
+.left_bar_hid_bar { right:0px; *right:0;
+}
+.bottom_hid_bar { right:0px; *right:0;
+margin-right:0px; }
+.side_hid_bar { display:none }
+/* ifame_chane style (end)***********************/
+
+
+

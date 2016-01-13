@@ -1,0 +1,44 @@
+
+* 玩家金币变更记录
+* version 1格式：
+* goldLog|1|channelId|playerId|yyyy-MM-dd HH:mm:ss|amount|origin|remark
+
+* 钻石变化记录
+* version 1格式：
+* amountLog|1|channelId|playerId|yyyy-MM-dd HH:mm:ss|playerLevel|amount|origin|remark|price|orderNum
+
+* 玩家精元变更记录
+* version 1格式：
+* jingYuanLog|1|channelId|playerId|yyyy-MM-dd HH:mm:ss|amount|origin|remark
+
+* 玩家荣誉变更记录
+* version 1格式：
+* honorLog|1|channelId|playerId|yyyy-MM-dd HH:mm:ss|amount|origin|remark
+
+* 玩家兑换日志
+* version 1格式：
+* exchangeLog|1|channelId|playerId|yyyy-MM-dd HH:mm:ss|shopItemId|shopItemNum|exchangeType|costNum
+
+* 当前在线人数
+* version 1格式：
+* onlineNum|1|areaId|yyyy-MM-dd HH:mm:ss|onlineNum
+
+* 玩家上下线信息
+* version 1格式：
+* playerOnline|1|channelId|playerId|yyyy-MM-dd HH:mm:ss上线时间|yyyy-MM-dd HH:mm:ss下线时间
+
+* 创建角色
+* version 1格式：
+* createPlayer|1|channelId|playerId|角色创建时间格式为yyyy-MM-dd HH:mm:ss
+
+* 角色升级
+* version 1格式：
+* playerLevel|1|channelId|playerId|playerLevel|角色升级时间格式为yyyy-MM-dd HH:mm:ss
+
+* 获取物品
+* version 1格式：
+* getItem|1|channelId|playerId|itemId|getWay|获取数量|获取天数|获取物品时间格式为yyyy-MM-dd HH:mm:ss
+
+* 使用物品
+* version 1格式：
+* useItem|1|channelId|playerId|itemId|useWay|使用数量|使用物品时间格式为yyyy-MM-dd HH:mm:ss

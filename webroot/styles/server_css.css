@@ -1,0 +1,81 @@
+/* Global Styles */
+@CHARSET "UTF-8";
+body {
+	margin:0px;
+	font-family:"黑体","lucidagrande",taho,verdana,"trebuchet ms",sans-serif;
+	COLOR: #fff;
+	background-color:#fff;
+	background: url(../images/bg_main.jpg) no-repeat ;
+	}
+	
+a {
+	color: #EDC041;
+	text-decoration:none;
+	font-weight:bold;
+	}
+	
+a:hover {
+	color: #990000;
+	text-decoration:none;
+	}
+	
+/* ID Styles */
+.main{ 
+	width:985px;min-height:800px; margin:0 auto;
+}
+#content_left{
+	width:220px;min-height:800px;float:left;
+}
+#app_icon{
+	margin-top:70px;width:211px;height:211px;float:left;
+}
+#content_right{
+	width:760px;min-height:800px;float:left; 
+}
+#content_title{
+	width:760px;height:38px;float:left; font-size:30px;line-height:35px;color:#360000; font-family:黑体;
+}
+#sub_title {
+	width:760px;height:30px;float:left; font-size:20px;line-height:30px;color:#000;font-family:黑体;
+}
+#accont_info{
+	width:727px;height:41px;float:left;background: url(../images/bg_accont_info.png) no-repeat ;padding-left:20px;font-family:黑体;font-size:20px;line-height:40px;color:#E8ECEF;
+}
+
+#content_info{
+	color:#939997;width:740px;float:left; margin-bottom:5px;height:20px;line-height:30px;
+}
+
+#content_split{
+	width:760px;height:1px; float:left; background-color:#CACACA;
+}
+#account_info{
+	width:760px;height:106px;float:left; 
+}
+#amount_type{
+	margin-top:5px;width:706px;min-height:207px;float:left;color:#000000;font-size:14px;
+}
+#amount_type_top{
+	width:706px;height:9px;float:left;background: url(../images/amount_type_top.png) no-repeat ;
+}
+#amount_type_center{
+	width:706px;min-height:250px;float:left;background: url(../images/amount_type_center.png) repeat-y ;
+}
+#amount_type_bottom{
+	width:706px;height:10px;float:left;background: url(../images/amount_type_bottom.png) no-repeat ;
+}
+#ch_btn{
+	width:706px;height:10px;float:left;
+}
+.ch_btn_next{
+width:150px;height:44px;background: url(../images/bg_ct_btn.png) no-repeat ; text-align:center;margin-top:10px;margin-left:10px;border-width:0px;
+	 font-size:20px;line-height:35px;color:#fff; font-family:黑体; margin-bottom:5px;float:left;
+}
+.ch_btn_back{
+width:150px;height:44px;background: url(../images/bg_ct_btn_back.png) no-repeat ; text-align:center;margin-top:10px;margin-left:10px;border-width:0px;
+	 font-size:20px;line-height:35px;color:#fff; font-family:黑体; margin-bottom:5px;float:left;
+}
+#radio_anount{
+	width:200px;height:26px;float:left;margin-left:10px;
+}
+	

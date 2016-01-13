@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx" xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx.xsd" default-autowire="byName">
+
+	<!-- JDBC参数配置 -->
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" lazy-init="true">
+		<property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
+		<property name="ignoreResourceNotFound" value="true" />
+		<property name="locations">
+			<list>
+				<value>classpath:jdbc.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- 数据源配置 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<!-- 设置JDBC驱动名称 -->
+		<property name="driverClass" value="${jdbc.driver}" />
+		<!-- 设置JDBC连接URL -->
+		<property name="jdbcUrl" value="${jdbc.url}" />
+		<!-- 设置数据库用户名 -->
+		<property name="user" value="${jdbc.username}" />
+		<!-- 设置数据库密码 -->
+		<property name="password" value="${jdbc.password}" />
+		<!-- 设置连接池初始值 -->
+		<property name="initialPoolSize" value="5" />
+		<!-- 设置连接池最大值 -->
+		<property name="maxPoolSize" value="100" />
+		<!-- 设置连接池最小空闲值 -->
+		<property name="minPoolSize" value="5" />
+		<!-- JDBC的标准参数，用以控制数据源内加载的PreparedStatements数量。但由于预缓存的statements  -->
+        <!--  属于单个connection而不是整个连接池。所以设置这个参数需要考虑到多方面的因素。  -->
+        <!-- 如果maxStatements与maxStatementsPerConnection均为0，则缓存被关闭。Default: 0 -->
+        <property name="maxStatements" value="0"/>
+        <!--连接池用完时客户调用getConnection()后等待获取连接的时间，单位：毫秒。超时后会抛出-->
+        <!--SQLEXCEPTION，如果设置0，则无限等待。Default:0-->
+        <property name="checkoutTimeout" value="20000" />
+        <property name="testConnectionOnCheckin" value="false"/>
+        <property name="testConnectionOnCheckout" value="true"/>
+        <property name="preferredTestQuery" value="SELECT 1"/>
+        <property name="maxIdleTime" value="7200" />
+	</bean>
+
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<!-- 配置Hibernate拦截器,自动填充数据的插入、更新时间 -->
+		<property name="dataSource" ref="dataSource" />
+		<property name="hibernateProperties">
+			<value>
+				<!-- 设置数据库方言 -->
+				hibernate.dialect=${hibernate.dialect}
+				<!-- 设置自动创建|更新|验证数据库表结构 -->
+				hibernate.hbm2ddl.auto=${hibernate.hbm2ddl.auto}
+				<!-- 输出SQL语句到控制台 -->
+				hibernate.show_sql=${hibernate.show_sql}
+				<!-- 格式化输出到控制台的SQL语句 -->
+				hibernate.format_sql=${hibernate.format_sql}
+				<!-- 是否开启二级缓存 -->
+				hibernate.cache.use_second_level_cache=${hibernate.cache.use_second_level_cache}
+				<!-- 配置二级缓存产品 -->
+				hibernate.cache.provider_class=${hibernate.cache.provider_class}
+				<!-- 是否开启查询缓存 -->
+				hibernate.cache.use_query_cache=${hibernate.cache.use_query_cache}
+				<!-- 数据库批量查询数 -->
+				hibernate.jdbc.fetch_size=${hibernate.jdbc.fetch_size}
+				<!-- 数据库批量更新数 -->
+				hibernate.jdbc.batch_size=${hibernate.jdbc.batch_size}
+				<!-- 自動重連 -->
+				hibernate.autoReconnect=true
+			</value>
+		</property>
+		<property name="packagesToScan">
+			<list>
+				<value>com.zhwyd.server.bean</value>
+			</list>
+		</property>
+	</bean>
+
+
+	<!-- 配置事务管理器 -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="*" />
+		</tx:attributes>
+	</tx:advice>
+	
+	
+	<context:component-scan base-package="com.zhwyd.server" name-generator="com.zhwyd.server.config.BeanNameGenerator">
+		<context:include-filter type="regex" expression=".+\.(api|dao|service)\.impl\..+" />
+	</context:component-scan>
+	<aop:config proxy-target-class="true">
+		<aop:pointcut id="myPointcut" expression="execution(* com.zhwyd.server.service.impl.*.*(..))" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="myPointcut" />
+	</aop:config>
+
+	<bean class="org.apache.commons.configuration.HierarchicalINIConfiguration">
+		<constructor-arg value="config.cnf"></constructor-arg>
+	</bean>
+</beans>
